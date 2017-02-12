@@ -1,0 +1,434 @@
+@CHARSET "ISO-8859-1";
+
+#toolHolder-dropdown{
+width:200px
+
+}
+.btnActive{
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#142768+0,1c4396+100 */
+background: #142768 !important; /* Old browsers */
+background: -moz-linear-gradient(top,  #142768 0%, #1c4396 100%) !important; /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #142768 0%,#1c4396 100%) !important; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #142768 0%,#1c4396 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#142768', endColorstr='#1c4396',GradientType=0 ) !important;/* IE6-9 */
+pointer-events: none;
+	
+}
+.startbutton {
+	background: url(/enterprise/watchdog/resources/img/start_active.png)
+		no-repeat top left;
+	width: 20px;
+	border: 0px;
+	padding: 5px 0 0px 0;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 11px;
+	background-size: 100%;
+	margin-right: 7px;
+}
+
+.exchangetool {
+	background: url(/enterprise/watchdog/resources/img/exchangeTool.png)
+		no-repeat top left;
+}
+
+img {
+	cursor: pointer !important;
+}
+
+#machineTools {
+	margin-top: 8px
+}
+
+.disablePointer{
+	    pointer-events: none;
+}
+.stopbutton {
+	background: url(/enterprise/watchdog/resources/img/stop_active.png)
+		no-repeat top left;
+	width: 20px;
+	border: 0px;
+	padding: 5px 0 12px 0;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 11px;
+	background-size: 100%;
+}
+
+.startbuttonDis {
+	background: url(/enterprise/watchdog/resources/img/start_disabled.png)
+		no-repeat top left;
+	width: 20px;
+	border: 0px;
+	padding: 5px 0 12px 0;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 11px;
+	background-size: 100%;
+	margin-right: 7px;
+}
+
+.stopbuttonDis {
+	background: url(/enterprise/watchdog/resources/img/stop_disabled.png)
+		no-repeat top left;
+	width: 20px;
+	border: 0px;
+	padding: 5px 0 12px 0;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 11px;
+	background-size: 100%
+}
+
+.detailsPage {
+	background: url(/enterprise/watchdog/resources/img/details_icon.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 18px;
+	border: 0px;
+	padding: 0px 16px 32px 2px;
+	cursor: hand;
+	cursor: pointer;
+	font-size: 11px;
+	margin-left: 4px;
+}
+
+td span {
+	position: relative;
+	top: 1px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #000;
+	text-align: center;
+	align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th {
+	background: #77d5d4;
+	text-align: center !important;
+	font-size: 13px;
+	color: #fff;
+	padding: 8px 0px 7px 0px !important
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th,
+	.table>thead>tr>td, .table>thead>tr>th {
+	padding: 12px 0px 0px 0px;
+	/* line-height: 17px; */
+	vertical-align: top;
+	border-top: 1px solid #39b5b4;
+}
+
+th, td {
+	border-bottom: 1px solid #bfd4d4;
+	border-collapse: collapse;
+	border-right: none;
+	font-size: 12px;
+}
+
+.removeTheme {
+	background: none;
+	border: none
+}
+
+.workPiece {
+	oveflow: hidden;
+	clear: both
+}
+
+.btnAddNew {
+	background: #f75b49;
+	border: none;
+	biorder-radius: 3px !important;
+	color: white;
+	margin-top: 10px;
+	float: right !important
+}
+
+.glyphicon {
+	transform: scale(1.3);
+	margin: 0px 6px;
+}
+
+td {
+	background: #f5fbfb;
+	font-size: 12px;
+	color: #063e3d;
+	padding: 5px 0px 0px 0px !important;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.toolcontainer {
+	width: 30%;
+	float: none;
+	text-align: center;
+	padding: 0.2cm;
+}
+
+.toolcontainer button {
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	left: 100%;
+}
+
+.toolcontainer input {
+	display: inline-block;
+	position: relative;
+	top: 50%;
+	left: 100%;
+}
+
+#NewRow {
+	float: left;
+}
+
+.row {
+	margin: 0 !important
+}
+
+#DeleteRow {
+	float: right;
+}
+
+.yellow {
+	color: #7a7a10;
+}
+
+.red {
+	color: red;
+}
+
+.white {
+	color: white;
+}
+
+.black {
+	color: black;
+}
+
+.green {
+	color: green;
+}
+
+/* new CSS */
+.footer_text {
+	text-align: right;
+	padding: 31px 0px;
+	font-size: 12px;
+	color: #666;
+}
+
+.container {
+	width: 1000px
+}
+
+.logoSection {
+	padding: 5px 0px;
+	border-bottom: 3px #ec1c23 solid;
+}
+
+.headerText {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 26px;
+	color: #337ab7;
+}
+
+.SigninSignout {
+	text-align: right;
+	float: right;
+	font-size: 12px;
+}
+
+.SigninSignout button {
+	border: none;
+	background: none;
+	color: #333;
+}
+
+.SigninSignout button:hover {
+	border: none;
+	background: none;
+	color: #000;
+	text-decoration: underline;
+}
+
+.center {
+	margin-top: 50px;
+}
+
+.modal-header {
+	padding-bottom: 5px;
+}
+
+.modal-footer {
+	padding: 0;
+}
+
+.modal-footer .btn-group button {
+	height: 40px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border: none;
+	border-right: 1px solid #ddd;
+}
+
+.modal-footer .btn-group:last-child>button {
+	border-right: 0;
+}
+
+select {
+	width : 20px !important; 
+}
+
+.seqNum {
+	
+}
+/** The Magic **/
+.btn-breadcrumb a {
+	color: white !important
+}
+.btn-breadcrumb .btn:not(:last-child):after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 10px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: 100%;
+  z-index: 3;
+}
+.btn-breadcrumb .btn:not(:last-child):before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 10px solid rgb(173, 173, 173);
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 3;
+}
+
+/** The Spacing **/
+.btn-breadcrumb .btn {
+  padding:6px 12px 6px 24px;
+}
+.btn-breadcrumb .btn:first-child {
+  padding:6px 6px 6px 10px;
+}
+.btn-breadcrumb .btn:last-child {
+  padding:6px 18px 6px 24px;
+}
+
+/** Default button **/
+.btn-breadcrumb .btn.btn-default:not(:last-child):after {
+  border-left: 10px solid #fff;
+}
+.btn-breadcrumb .btn.btn-default:not(:last-child):before {
+  border-left: 10px solid #ccc;
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
+  border-left: 10px solid #ebebeb;
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
+  border-left: 10px solid #adadad;
+}
+
+/** Primary button **/
+.btn-breadcrumb .btn.btn-primary:not(:last-child):after {
+  border-left: 10px solid #428bca;
+}
+.btn-breadcrumb .btn.btn-primary:not(:last-child):before {
+  border-left: 10px solid #357ebd;
+}
+.btn-breadcrumb .btn.btn-primary:hover:not(:last-child):after {
+  border-left: 10px solid #3276b1;
+}
+.btn-breadcrumb .btn.btn-primary:hover:not(:last-child):before {
+  border-left: 10px solid #285e8e;
+}
+
+/** Success button **/
+.btn-breadcrumb .btn.btn-success:not(:last-child):after {
+  border-left: 10px solid #5cb85c;
+}
+.btn-breadcrumb .btn.btn-success:not(:last-child):before {
+  border-left: 10px solid #4cae4c;
+}
+.btn-breadcrumb .btn.btn-success:hover:not(:last-child):after {
+  border-left: 10px solid #47a447;
+}
+.btn-breadcrumb .btn.btn-success:hover:not(:last-child):before {
+  border-left: 10px solid #398439;
+}
+
+/** Danger button **/
+.btn-breadcrumb .btn.btn-danger:not(:last-child):after {
+  border-left: 10px solid #d9534f;
+}
+.btn-breadcrumb .btn.btn-danger:not(:last-child):before {
+  border-left: 10px solid #d43f3a;
+}
+.btn-breadcrumb .btn.btn-danger:hover:not(:last-child):after {
+  border-left: 10px solid #d2322d;
+}
+.btn-breadcrumb .btn.btn-danger:hover:not(:last-child):before {
+  border-left: 10px solid #ac2925;
+}
+
+/** Warning button **/
+.btn-breadcrumb .btn.btn-warning:not(:last-child):after {
+  border-left: 10px solid #f0ad4e;
+}
+.btn-breadcrumb .btn.btn-warning:not(:last-child):before {
+  border-left: 10px solid #eea236;
+}
+.btn-breadcrumb .btn.btn-warning:hover:not(:last-child):after {
+  border-left: 10px solid #ed9c28;
+}
+.btn-breadcrumb .btn.btn-warning:hover:not(:last-child):before {
+  border-left: 10px solid #d58512;
+}
+
+/** Info button **/
+.btn-breadcrumb .btn.btn-info:not(:last-child):after {
+  border-left: 10px solid #5bc0de;
+}
+.btn-breadcrumb .btn.btn-info:not(:last-child):before {
+  border-left: 10px solid #46b8da;
+}
+.btn-breadcrumb .btn.btn-info:hover:not(:last-child):after {
+  border-left: 10px solid #39b3d7;
+}
+.btn-breadcrumb .btn.btn-info:hover:not(:last-child):before {
+  border-left: 10px solid #269abc;
+}
+.btn {
+	cursor: default !important;
+	}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+	<!-- Include this resource to get the Log Folder from Properties file -->
+	<property resource="application-${PROFILE}.properties" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{20} -
+				%msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss" />
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		use the previously created timestamp to create a uniquely
+		named log
+		file
+		<file>${LOG_FOLDER}/applogs/applog-${bySecond}.txt
+		</file>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{20} -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.ricoh.ripl.platform.iam" level="info"
+		additivity="true">
+		<appender-ref ref="FILE" />
+	</logger>
+
+	<appender name="AUDIT" class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_FOLDER}/auditlogs/audit-${bySecond}.txt
+		</file>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{20} -
+				%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="AUDIT_LOGGER" level="info" additivity="true">
+		<appender-ref ref="AUDIT" />
+	</logger>
+
+	<root level="info">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>

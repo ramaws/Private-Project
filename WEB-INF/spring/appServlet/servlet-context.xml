@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	<!-- enables annotation based configuration -->
+	<context:annotation-config />
+	
+	<!-- allows for ${} replacement in the spring xml configuration from the 
+		application-default.properties, application-dev files on the classpath -->
+	<context:property-placeholder
+		location="classpath:application-${PROFILE}.properties"
+		ignore-unresolvable="true" />
+<!-- expose specific properties to application  -->
+	<beans:bean id="applicationProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<beans:property name="singleton" value="true" />
+		<beans:property name="properties">
+			<beans:props>
+				<beans:prop key="socketUrl">${PLATFORM_WATCHDOG_SOCKET_URL}</beans:prop>
+				<beans:prop key="systemVerion">${ENTERPRISE_WATCHDOG_SYSTEM_VERSION}</beans:prop>
+				<beans:prop key="platformUrl">${PLATFORM_WATCHDOG_PUBLIC_URL}</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+	<context:component-scan base-package="com.ricoh.ripl.enterprise.watchdog" />
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+
+	<beans:bean class="org.springframework.web.client.RestTemplate"
+		scope="prototype" />
+
+	<beans:bean id="simpleMappingExceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<beans:property name="defaultErrorView" value="error/error" />
+		<beans:property name="exceptionAttribute" value="ex" />
+		<!-- Name of logger to use to log exceptions. Unset by default, so logging 
+			is disabled unless you set a value. -->
+		<beans:property name="warnLogCategory"
+			value="com.ricoh.ripl.enterprise.watchdog.controller.GlobalExceptionHandler" />
+	</beans:bean>
+
+</beans:beans>
